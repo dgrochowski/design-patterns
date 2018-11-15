@@ -1,0 +1,19 @@
+sudo: required
+
+language: php
+
+services:
+  - docker
+
+before_install:
+  - rm -rf vendor
+  - docker-compose up --build -d
+
+install:
+  - docker-compose exec design-patterns-php composer install --dev
+
+script:
+  - docker-compose exec design-patterns-php vendor/bin/phpunit --testsuite design-patterns
+
+after_script:
+  - docker-compose kill

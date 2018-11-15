@@ -1,0 +1,25 @@
+{
+    "name": "dgrochowski/design-patterns",
+    "description": "Design patterns implemented in PHP",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Behavioral\\": "Behavioral/",
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dawid Grochowski",
+            "email": "kontakt@dawidgrochowski.pl"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-pcntl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.4",
+        "phpunit/php-invoker": "^2.0"
+    }
+}
