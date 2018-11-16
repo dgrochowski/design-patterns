@@ -16,4 +16,4 @@ script:
   - docker-compose exec design-patterns-php vendor/bin/phpunit --testsuite design-patterns
 
 after_script:
-  - docker-compose kill
+  - docker-compose down

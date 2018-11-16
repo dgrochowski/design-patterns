@@ -7,3 +7,24 @@
 - [Observer - [pl] obserwator](https://github.com/dgrochowski/design-patterns/tree/master/Behavioral/Observer)
 - [State - [pl] stan](https://github.com/dgrochowski/design-patterns/tree/master/Behavioral/State)
 - [Strategy - [pl] strategia](https://github.com/dgrochowski/design-patterns/tree/master/Behavioral/Strategy)
+
+## Tests - how to run
+Requirements:
+- [Docker-compose](https://docs.docker.com/compose/)
+
+##### Build and start docker container
+```bash
+docker-compose up --build -d
+```
+##### Install libraries (vendors)
+```bash
+docker-compose exec design-patterns-php composer install --dev
+```
+##### Run tests (phpunit)
+```bash
+docker-compose exec design-patterns-php vendor/bin/phpunit --testsuite design-patterns
+```
+##### Stop and remove docker container
+```bash
+docker-compose down
+```
