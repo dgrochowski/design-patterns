@@ -1,7 +1,7 @@
 version: "3.1"
 services:
     design-patterns-php:
-      build: docker/php-fpm
+      build: .
       working_dir: /var/www/design-patterns
       volumes:
         - .:/var/www/design-patterns
